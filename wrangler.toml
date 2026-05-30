@@ -13,9 +13,7 @@ database_name = "tg-s3-db"
 database_id = ""
 migrations_dir = "migrations"
 
-[[r2_buckets]]
-binding = "CACHE"
-bucket_name = "tg-s3-cache"
+
 
 [triggers]
 crons = ["0 */6 * * *"]  # Every 6 hours: 8 cleanup tasks (expired/orphaned shares, stale multiparts, D1-TG consistency, R2 cache, password locks, orphaned chunks, lifecycle expiration)
